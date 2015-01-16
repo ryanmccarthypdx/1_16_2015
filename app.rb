@@ -10,7 +10,7 @@ get('/') do
   erb(:main)
 end
 
-post('/post') do
+post('/posted') do
   @title = "My Contact List"
   @contact_list = Contact.all()
   @name = params.fetch("name")
@@ -38,6 +38,8 @@ get('/info/:selection') do
 end
 
 post('/delete_all') do
+  @title = "My Contact List"
   Contact.clear()
+  @contact_list = Contact.all()
   erb(:main)
 end

@@ -1,8 +1,7 @@
 <h1>My Contacts</h1>
-<br />
 
 <h3>Add a new contact</h3>
-<form action='/post' method='post'>
+<form action='/posted' method='post'>
   <label for='name'>Name:</label>
   <input id='name' name='name' type='text'>
   <br />
@@ -19,7 +18,7 @@
 <h3>Search my contacts</h3>
 <form action='/results' method='get'>
   <label for='search_term'>Search for:</label>
-  <input id='search_term' name='search_term' type='text' required='required'>
+  <input id='search_term' name='search_term' type='text'>
   <button type='submit' class='btn btn-success'>Search</button>
 </form>
 <br />
@@ -32,6 +31,6 @@
 </ol>
 <br />
 
-<form action'/delete_all' method='post'>
+<form action='/delete_all' method='post'>
   <button type='submit' class='btn btn-danger'>DELETE ALL CONTACTS</button>
 </form>
