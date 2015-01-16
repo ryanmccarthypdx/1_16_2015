@@ -1,0 +1,11 @@
+<h2>Search Results</h2>
+<br />
+
+<ul>
+  <% @search_results.each() do |result| %>
+    <li><a href='/info/<%= result.id() %>'>Name: <%= result.name() %>, Home: <%= result.info().home %>, Cell: <%= result.info().cell() %></a></li>
+  <% end %>
+</ul>
+<br />
+
+<p><a href='/'>Back to my contacts</a></p>
