@@ -29,13 +29,22 @@ class Contact
   define_singleton_method(:search) do |search_term|
     search_results = []
     @@all_contacts.each() do |contact_object|
-      if contact_object.name().include?(search_term) || contact_object.info().include?(search_term)
+      if contact_object.name().include?(search_term) || contact_object.info().home().include?(search_term) || contact_object.info().cell().include?(search_term)
         search_results.push(contact_object)
       end
     end
     search_results
   end
 
+  define_singleton_method(:sel) do |selection|
+    output = nil
+    @@all_contacts.each() do |contact_object|
+      if contact_object.id().==(selection)
+        output = contact_object
+      end
+    end
+    output
+  end
 
 
 
