@@ -18,7 +18,14 @@ class Contact
     @@all_contacts
   end
 
-  
+  define_method(:id) do
+    @id
+  end
+
+  define_singleton_method(:clear) do
+    @@all_contacts = []
+  end
+
 
 
 
